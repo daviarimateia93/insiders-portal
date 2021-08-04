@@ -9,9 +9,8 @@ import CreateIdea from "@/views/create/Ideas.vue";
 import About from "@/views/About.vue";
 //SETTINGS
 
-import Login from "@/views/Login.vue";
-import Signup from "@/views/Signup.vue";
-
+import Login from "@/components/Login.vue";
+import Signup from "@/components/Signup.vue";
 
 const routes = [
   {

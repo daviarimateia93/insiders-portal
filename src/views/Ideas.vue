@@ -1,17 +1,21 @@
  <template>
   <h1>Ideas</h1>
     <v-card id="idea-card" v-for="(item, i) in items" :key="i">
-      <div id="idea-head">
+      <v-row id="idea-head">
         <div id="idea-head-left">
           <v-avatar>
             <v-img size="100" src="https://pbs.twimg.com/profile_images/1257083037537501185/HCcZl8Os_400x400.jpg"></v-img>
           </v-avatar>
         </div>
         <div id="idea-head-right">
-          <v-card-title>{{item.title}}</v-card-title>
-          <v-card-subtitle><strong>Por: </strong>Renan Soriano em {{item.data}}</v-card-subtitle>
+          <v-row>
+            <v-card-title>{{item.title}}</v-card-title>
+          </v-row>
+          <v-row>
+            <v-card-subtitle><strong>Por: </strong>Renan Soriano em {{item.data}}</v-card-subtitle>
+          </v-row>
         </div>
-      </div>
+      </v-row>
       <v-card-text>{{item.text}}</v-card-text>
       <v-chip id="idea-ticker">{{item.ticker}}</v-chip>
       <v-card-actions id="idea-comentario">
@@ -63,6 +67,15 @@ h1 {
   float: none; 
   margin-bottom: 15px;
   margin-top: 15px;
+  background-color: #F0F4C3;
+  border-radius: 15px 50px 30px;
+}
+
+#idea-head{
+  margin-left: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-right: 4px;
 }
 
 #idea-head-left{
@@ -71,6 +84,7 @@ h1 {
 
 #idea-ticker{
   margin: 8px;
+  background-color:#C0CA33;
 }
 
 #idea-comentario{
@@ -78,8 +92,7 @@ h1 {
 }
 
 #idea-btn-comentario{
-  color:#fff;
-  background-color: #000;
+  background-color:#C0CA33;
 }
 
 #idea-btn-new{

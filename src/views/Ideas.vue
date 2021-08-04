@@ -1,25 +1,30 @@
  <template>
- <h1>Ideas</h1>
-  <v-row justify="center">
-    <v-card id="idea-card" shaped v-for="(item, i) in items" :key="i">
-      <v-card-title>{{item.title}}</v-card-title>
-      <v-card-subtitle>
-        <strong>Por: </strong>Renan Soriano em {{item.data}}
-          </v-card-subtitle>
-        <v-card-text>
-          <v-icon class="mr-1"> mdi-heart </v-icon>
-          <span class="subheading mr-2">256</span>
-          <span class="mr-1">·</span>
-          <v-icon class="mr-1"> mdi-share-variant </v-icon>
-          <span class="subheading">45</span>
-        </v-card-text>
+  <h1>Ideas</h1>
+    <v-card id="idea-card" v-for="(item, i) in items" :key="i">
+      <div id="idea-head">
+        <div id="idea-head-left">
+          <v-avatar>
+            <v-img size="100" src="https://pbs.twimg.com/profile_images/1257083037537501185/HCcZl8Os_400x400.jpg"></v-img>
+          </v-avatar>
+        </div>
+        <div id="idea-head-right">
+          <v-card-title>{{item.title}}</v-card-title>
+          <v-card-subtitle><strong>Por: </strong>Renan Soriano em {{item.data}}</v-card-subtitle>
+        </div>
+      </div>
       <v-card-text>{{item.text}}</v-card-text>
       <v-chip id="idea-ticker">{{item.ticker}}</v-chip>
-      <v-card-actions>
-        <v-btn id="idea-btn-comentario" text @click="reserve">{{item.comment}}</v-btn>
+      <v-card-actions id="idea-comentario">
+        <v-btn id="idea-btn-comentario">{{item.comment}}</v-btn>
       </v-card-actions>
     </v-card>
-  </v-row>
+    <v-btn id="idea-bt-new"
+      fab
+      large
+      color="#F0F4C3"
+    >
+      <v-icon dark> mdi-pencil</v-icon>
+    </v-btn>
 </template>
 
 <script>
@@ -52,19 +57,37 @@ h1 {
 }
 
 #idea-card{
-  margin-top: 15px;
-  margin-bottom: 15px;
   padding: 4px;
-  min-width: 95%;
+  max-width: 85%;
+  margin: 0 auto; 
+  float: none; 
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+#idea-head-left{
+  float: left;
 }
 
 #idea-ticker{
   margin: 8px;
 }
 
+#idea-comentario{
+  float: right;
+}
+
 #idea-btn-comentario{
   color:#fff;
   background-color: #000;
+}
+
+#idea-btn-new{
+  float: right;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 </style>

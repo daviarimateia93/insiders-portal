@@ -51,7 +51,9 @@
       <v-toolbar-title><span class="font-weight-bold ma-2" ><span class="font-weight-black">In</span>siders <span class="font-weight-medium">Network</span></span></v-toolbar-title>
     </v-app-bar>
     <v-main>
+      <v-container fluid>
         <router-view></router-view>
+      </v-container>
     </v-main>
   </v-app>
 </template>

@@ -16,8 +16,10 @@
           </v-row>
         </div>
       </v-row>
+      <v-chip id="idea-ticker">{{item.ticker}}</v-chip> 
+      <v-chip id="idea-ticker">DAY-TRADE</v-chip> 
+      <v-chip id="idea-ticker">ANÁLISE FUNDAMENTALISTA</v-chip> 
       <v-card-text>{{item.text}}</v-card-text>
-      <v-chip id="idea-ticker">{{item.ticker}}</v-chip>
       <v-card-actions id="idea-comentario">
         <v-btn id="idea-btn-comentario">{{item.comment}}</v-btn>
       </v-card-actions>
@@ -68,7 +70,7 @@ h1 {
   margin-bottom: 15px;
   margin-top: 15px;
   background-color: #F0F4C3;
-  border-radius: 15px 50px 30px;
+  border-radius: 15px 50px 5px;
 }
 
 #idea-head{
